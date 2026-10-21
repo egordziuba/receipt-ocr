@@ -1,0 +1,20 @@
+[
+  {
+    "language": "ukr",
+    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/ukr.traineddata",
+    "bytes": 12408644,
+    "sha256": "640c9fbda1ac45d1c88741ef01c688c337559c37f563c36e62e7e5f990a60893"
+  },
+  {
+    "language": "rus",
+    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/rus.traineddata",
+    "bytes": 19920885,
+    "sha256": "681be2c2bead1bc7bd235df88c44e8e60ae73ae866840c0ad4e3b4c247bd37c2"
+  },
+  {
+    "language": "eng",
+    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/eng.traineddata",
+    "bytes": 23466654,
+    "sha256": "daa0c97d651c19fba3b25e81317cd697e9908c8208090c94c3905381c23fc047"
+  }
+]

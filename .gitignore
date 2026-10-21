@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+models/*.traineddata
+models_legacy/
+results/
+runs/
+annotations/
+release/
+*.zip
