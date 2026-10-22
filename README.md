@@ -1,5 +1,7 @@
 # Receipt OCR — offline Tesseract pipeline for photographed business documents
 
+[![Tests](https://github.com/egordziuba/receipt-ocr/actions/workflows/tests.yml/badge.svg)](https://github.com/egordziuba/receipt-ocr/actions/workflows/tests.yml)
+
 Local OCR for phone photos of printed receipts, fiscal day reports, card-terminal slips, supplier invoices and sales screens in Ukrainian, Russian and English. Built for a small retail business that wanted to stop retyping daily paperwork; the photos and reference data of that business are **not** part of this repository.
 
 Project documentation is in Russian ([README.ru.md](README.ru.md)).

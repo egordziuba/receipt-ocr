@@ -1,0 +1,33 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Tesseract and fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr fonts-dejavu-core
+      - name: Install test dependencies
+        run: pip install -r requirements-test.txt
+      - name: Cache OCR models
+        uses: actions/cache@v4
+        with:
+          path: models/
+          key: ${{ runner.os }}-models-${{ hashFiles('model_manifest.json') }}
+      - name: Download and verify OCR models
+        run: python scripts/download_models.py
+      - name: Run tests
+        run: python -m pytest -q
