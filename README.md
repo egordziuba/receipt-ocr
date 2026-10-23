@@ -16,6 +16,25 @@ Project documentation is in Russian ([README.ru.md](README.ru.md)).
 - Every pass, coordinate and alternative is kept; duplicates are detected by SHA-256 of the file content
 - No network calls, no cloud OCR, no LLM, no accounting-equation "corrections"
 
+## Example
+
+A fully synthetic, fictional Ukrainian/English receipt, rotated on a dark background. Regenerate with `python scripts/make_demo.py` (normal dependencies/models plus DejaVu Sans or `--font path/to/font.ttf`); it runs the real `accurate` pipeline.
+
+| Synthetic input | Detected sheet and words |
+| --- | --- |
+| <img src="docs/img/demo_input.png" alt="Fictional synthetic receipt on a dark background" width="360"> | <img src="docs/img/demo_boxes.png" alt="Detected sheet outline and confidence-coloured word boxes" width="360"> |
+
+Cyan marks the detected sheet; word boxes are green (confidence ≥85), amber (60–<85) or red (<60). Tesseract confidence is not a probability of correctness.
+
+Actual output excerpt from [`demo_output.json`](docs/demo_output.json), which also records the rendered text, five words with boxes/confidences and a comparison for this example only:
+
+```text
+Зоряний мед 26.30
+TOTAL / РАЗОМ 100.00
+DEMO ONLY
+HE ДЛЯ ОПЛАТИ
+```
+
 ## Honest evaluation
 
 A separate evaluator (`evaluate.py`) compares results with an independent, region-level gold annotation using Levenshtein character accuracy and exact money-amount matches, with strict provenance checks (image hashes, single algorithm version, complete run).
