@@ -1,0 +1,79 @@
+{
+  "synthetic": true,
+  "mode": "accurate",
+  "engine": "tesseract-lstm",
+  "input_sha256": "8dacd937ad920425f6e7cd62fe6be685c7f02cb1153ad71e5c017267c8cbb198",
+  "input_size": [
+    840,
+    1040
+  ],
+  "font": "DejaVuSans.ttf",
+  "rendered_text": "КРАМНИЦЯ ХМАРОЛИС\nFICTIONAL DEMO SHOP\nСИНТЕТИЧНИЙ ЧЕК\nХмарний чай 42.50\nMoon biscuits 31.20\nЗоряний мед 26.30\nTOTAL / РАЗОМ 100.00\nDEMO ONLY\nНЕ ДЛЯ ОПЛАТИ",
+  "text": "КРАМНИЦЯ ХМАРОЛИС\nFICTIONAL DEMO SHOP\nСИНТЕТИЧНИЙ ЧЕК\nХмарний чай 42.50\nMoon biscuits 31.20\nЗоряний мед 26.30\nTOTAL / РАЗОМ 100.00\nDEMO ONLY\nHE ДЛЯ ОПЛАТИ",
+  "comparison": {
+    "scope": "This synthetic example only; not the evaluation set",
+    "normalization": "Unicode NFKC, casefold, remove whitespace; no alphabet or digit corrections",
+    "reference_characters": 130,
+    "edit_errors": 2,
+    "character_accuracy_pct": 98.462
+  },
+  "word_count": 25,
+  "word_sample_note": "First five final words; boxes are [x1, y1, x2, y2] in original image pixels; confidence is Tesseract's score, not probability",
+  "words": [
+    {
+      "text": "КРАМНИЦЯ",
+      "box": [
+        109.02,
+        179.29,
+        291.62,
+        221.54
+      ],
+      "confidence": 93.242195
+    },
+    {
+      "text": "ХМАРОЛИС",
+      "box": [
+        303.54,
+        165.38,
+        489.65,
+        203.24
+      ],
+      "confidence": 92.036743
+    },
+    {
+      "text": "FICTIONAL",
+      "box": [
+        114.63,
+        258.63,
+        280.82,
+        294.09
+      ],
+      "confidence": 96.231705
+    },
+    {
+      "text": "DEMO",
+      "box": [
+        292.47,
+        251.3,
+        387.34,
+        281.63
+      ],
+      "confidence": 96.836166
+    },
+    {
+      "text": "SHOP",
+      "box": [
+        398.99,
+        244.45,
+        487.15,
+        273.96
+      ],
+      "confidence": 96.526787
+    }
+  ],
+  "model_sha256": {
+    "eng.traineddata": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+    "rus.traineddata": "b617eb6830ffabaaa795dd87ea7fd251adfe9cf0efe05eb9a2e8128b7728d6b6",
+    "ukr.traineddata": "1277f6e3b6f707063a92d40e7678e7f57154e8414e328e340be9ee9275eea9c8"
+  }
+}
